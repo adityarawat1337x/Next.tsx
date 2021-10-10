@@ -42,3 +42,15 @@ Next js does:
 - Images are lazyloaded,responisve,optimised on-demand
 - post css can be configured for tailwind
 - Link component is used to navigate so that it loads only needed components
+- Next.js’ pre-rendering feature, it pre renders the html content so it can run without js. It wont be dynamic but unlike react which will not even display anything, next will display the pages.
+- The two forms of pre-rendering: Static Generation and Server-side Rendering.
+
+  - Static Generation is the pre-rendering method that generates the HTML at build time. The pre-rendered HTML is then reused on each request.
+    (use when data is kind of constant)
+
+  - Server-side Rendering is the pre-rendering method that generates the HTML on each request.
+    (use when page data updates frequently)
+
+- Static Generation with data, and without data.
+- getStaticProps and how to use it to import external blog data into the index page.
+- Some useful information on getStaticProps.
