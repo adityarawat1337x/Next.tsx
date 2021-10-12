@@ -51,6 +51,12 @@ Next js does:
   - Server-side Rendering is the pre-rendering method that generates the HTML on each request.
     (use when page data updates frequently)
 
-- Static Generation with data, and without data.
-- getStaticProps and how to use it to import external blog data into the index page.
-- Some useful information on getStaticProps.
+  - Client-side rendering used in user dashboards where data is frequently changing
+
+- Dynamic Routes
+  - How to statically generate pages with dynamic -routes using getStaticPaths.
+  - How to write getStaticProps to fetch the data for each blog post.
+  - How to render markdown using remark.
+  - How to pretty-print date strings.
+  - How to link to a page with dynamic routes.
+  - Some useful information on dynamic routes.
