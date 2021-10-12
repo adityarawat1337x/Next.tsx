@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { IconButton } from "@chakra-ui/button";
+import { useColorMode } from "@chakra-ui/react";
 
 const name = "Aditya Rawat";
 export const siteTitle = "Next.js Sample Website";
@@ -14,6 +16,8 @@ export default function Layout({
   children: React.ReactNode;
   home: boolean;
 }) {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -31,6 +35,11 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <IconButton
+        aria-label="aria-label"
+        icon={<></>}
+        onClick={toggleColorMode}
+      ></IconButton>
       <header className={styles.header}>
         {home ? (
           <>
