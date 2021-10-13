@@ -5,6 +5,8 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { IconButton } from "@chakra-ui/button";
 import { useColorMode } from "@chakra-ui/react";
+import { BsMoonFill } from "react-icons/bs";
+import { FaSun } from "react-icons/fa";
 
 const name = "Aditya Rawat";
 export const siteTitle = "Next.js Sample Website";
@@ -37,8 +39,9 @@ export default function Layout({
       </Head>
       <IconButton
         aria-label="aria-label"
-        icon={<></>}
+        icon={colorMode === "dark" ? <FaSun /> : <BsMoonFill />}
         onClick={toggleColorMode}
+        isRound="true"
       ></IconButton>
       <header className={styles.header}>
         {home ? (
