@@ -27,14 +27,14 @@ import Layout, { siteTitle } from "../../components/layout";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Random: NextPage = () => {
-  const { data, error } = useSWR("https://randomuser.me/api/", fetcher, {
-    revalidateOnFocus: false,
-    revalidateOnMount: true,
-    revalidateOnReconnect: false,
-    refreshWhenOffline: false,
-    refreshWhenHidden: false,
-    refreshInterval: 0,
-  });
+  // const { data, error } = useSWR("https://randomuser.me/api/", fetcher, {
+  //   revalidateOnFocus: false,
+  //   revalidateOnMount: true,
+  //   revalidateOnReconnect: false,
+  //   refreshWhenOffline: false,
+  //   refreshWhenHidden: false,
+  //   refreshInterval: 0,
+  // });
 
   const [isSmall] = useMediaQuery("(max-width: 600px)");
   return (
@@ -49,7 +49,7 @@ const Random: NextPage = () => {
         >
           <Center width="100%" height="100%">
             <VStack>
-              <Image
+              {/* `<Image
                 borderRadius="full"
                 boxSize={["150px", "200px"]}
                 src={data ? data["results"][0].picture.large : ""}
@@ -64,7 +64,7 @@ const Random: NextPage = () => {
                     " " +
                     data["results"][0].name.last
                   : "Name"}
-              </Text>
+              </Text>` */}
               <HStack spacing={["1.5", "3"]}>
                 <Icon
                   boxSize={["1.3em", "2em"]}

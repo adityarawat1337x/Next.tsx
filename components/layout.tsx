@@ -41,7 +41,7 @@ export default function Layout({
         aria-label="aria-label"
         icon={colorMode === "dark" ? <FaSun /> : <BsMoonFill />}
         onClick={toggleColorMode}
-        isRound="true"
+        isRound={true}
       ></IconButton>
       <header className={styles.header}>
         {home ? (
