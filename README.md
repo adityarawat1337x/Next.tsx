@@ -60,4 +60,4 @@ Next js does:
   - How to pretty-print date strings.
   - How to link to a page with dynamic routes.
   - Some useful information on dynamic routes.
-  - 
+  
